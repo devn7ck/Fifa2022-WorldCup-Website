@@ -1,0 +1,370 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--color1: rgb(240, 195, 214);
+	--color2: rgb(128, 61, 89);
+	--color3: rgb(238, 227, 232);
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+.ease{
+	transition: all ease 0.98s;
+}
+.flex{
+	display: inline-flex;
+}
+
+body{
+	width: 100%;
+
+	background: whitesmoke;
+}
+
+a{
+	text-decoration: none;
+	color: unset;
+}
+
+li{
+	list-style: none;
+}
+
+h2, h3, svg, p, span{
+	color: rgb(87,87,87);
+}
+h2, h3, h4, p, span, .logo, .copyright{
+	cursor: default;
+}
+
+
+
+.go-top{	
+	bottom: 0;
+	right: 0;
+	margin: 0 40px 40px 0;
+	position: absolute;
+	position: fixed;
+	width: 65px;
+	height: 65px;
+	background: var(--color2);
+	display: flex;
+	text-align: center;
+	border-radius: 5.5px;
+	box-shadow: 0 0 14px 3px rgb(0,0,0, 0.2);
+
+}
+.go-top svg{
+	color: whitesmoke;
+	margin: auto;
+}
+/*#######################################NAVBAR STYLESHEET#########################################*/
+nav{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: stretch;
+	min-width: 100%;
+	height: auto;
+	padding: 37px 0;
+	/*background: rgb(5,5,5);
+	box-shadow: 0 6px 5px 1px rgb(0,0,0,0.45);*/
+    background: transparent;
+}
+
+.navbar{
+	display: flex;
+	justify-content: space-between;	
+}
+
+.logo{
+	float: left;
+	margin-left:8%;
+	color: var(--color2);
+	font-size: 16.5px;
+	font-weight: 1000;
+	letter-spacing: 1.4px;
+	font: "";
+	transition: all 0.3s ease-in;
+}
+.logo:hover{
+	color: white;
+}
+.menu{ 	
+	float: right;
+	margin-right:8%;
+}
+
+.menu-list{
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+.menu-list li{
+	display: inherit;
+	color: var(--color2);
+	font: "";
+	font-size: 15.75px;
+	margin: auto 40px;
+}
+.menu-list li a svg{
+	color: invert;
+}
+.menu-list li:last-child{
+	margin-right: 0;
+}
+.menu-list li a{
+	transition: all 0.35s ease;
+}
+.menu-list li a:hover{
+	color: currentColor;
+	cursor: pointer;
+	transition: all 0.35s ease;
+}
+
+#menuBtn, .dropdown-menu{
+	display: none;
+}
+
+@media screen and (max-width:71.07rem){
+    .menu-list.A{
+        display:none;  
+    }
+    #menuBtn{
+		display: block;
+        cursor: pointer;
+    }
+	#menuBtn div{
+		margin: 5px;
+		height: 4px;
+		width: 34px;
+		border-radius: 5px;
+		background-color: var(--color2);
+
+	}
+    .dropdown-menu{
+        position: absolute;
+		left: 0;
+        width: /*246px*/ 100vw;
+		height: 100vh;
+        justify-content: center;
+        align-content: center;
+        background: rgb(0,0,0,0.83);
+        transform: translateY(37px)/*translate(-129.3px, 43.4px)*/;
+        border-radius:0 0 3px 3px;
+        box-shadow: 0 6px 5px 1px rgb(0,0,0,0.45);
+		z-index: 5;
+    }
+    .display_JS{
+        display: flex;
+    }
+    .dropdown-menu ul{
+        margin: auto;
+		display: grid;
+    }
+    .dropdown-menu ul li{   
+		margin: auto;
+        text-align: center;
+    }
+    .dropdown-menu ul li a{
+        display: flex;
+		font-size: 20px;
+		width: 200px;
+        justify-content:stretch;
+		justify-self: center;
+        margin-bottom: 15px;
+        padding: 10px 27px; 
+		overflow:hidden;     
+    }
+	.dropdown-menu ul li a .bi{
+		width: 23px;
+		height: 23px;
+		margin-right: 12px;
+    }
+    .dropdown-menu ul li a:hover{
+        background: rgb(1, 2, 1, 0.84);
+        color: #ffffff;
+        border-radius: 3px;
+    }
+    .dropdown-menu ul li a:active{
+        background: #201802;
+    }
+}
+
+section{
+	padding: 120px;
+
+}
+
+section h3{
+	margin: 32px;
+}
+
+#sec-1{
+	background-color:var(--color3);
+}
+
+#sec-1 h3, #sec-2 h3{
+	font-size: xx-large;
+} 
+#sec-1 p, #sec-2 p{
+	word-spacing: 1px;
+	letter-spacing: 0.6px;
+	line-height: 24px;
+}
+
+#sec-2 h3{
+	margin: none;
+	margin-bottom: 60px;
+	font-size: 46px;
+	color: var(--color2);
+}
+
+.section-2{
+	max-width: 99vw;
+	height: auto;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.box{
+	border-radius: 7px;
+    min-width: 195px;
+    margin: 25px;
+	padding: 0 0 18px;
+	background-color: var(--color3);
+}
+.box:active{
+	box-shadow: 0 0 14px 7px rgb(0,0,0, 0.29);
+}
+.group{
+	padding: 18px;
+
+}
+.group h2, .group p{
+	text-align: center;
+
+}
+.group h2{
+	font-size: 25px;
+	line-height: 60px;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: var(--color2);
+}
+.group p{
+	font-size: 20px;
+	letter-spacing: 0.8px;
+	margin: 5px auto;
+}
+
+/*#######################################FOOTER STYLESHEET#########################################*/
+
+footer{
+	background: rgb(8,8,6);
+}
+.footer{
+	width: 100%;
+	min-height: 35rem;
+	padding-top: 3rem;
+	flex-wrap: wrap;
+}
+
+.footer div{
+	margin: 50px auto;
+	padding: 20px;
+	color: whitesmoke; 
+	width: 250px;
+}
+
+.footer div h4{
+	text-align: center;
+	color: var(--color2);
+	font-size: 21px;
+	font-weight: 930;
+	font: "";
+}
+.text-body{
+	color: rgb(160, 160, 150);
+}
+.footer div .text-body{
+	margin: 35px 12px;
+}
+.footer .about{
+	width: 25.5rem;
+}
+.about .text-body{
+	text-align: center;
+	line-height: 22px;
+}
+.page-links ul li{
+	margin: 13px 8px;
+}
+.email-me ul li{
+	margin: 13px 0;
+}
+.about .text-body, .page-links ul li, .email-me ul li{
+	font-size: 15.8px;
+}
+.email-me ul li textarea{
+	font-size: 12.65px;
+}
+.text-body li button{
+	background: var(--color2);
+	color: whitesmoke;
+	font-size: 14px;
+	padding: 7px;
+	border: 1px solid var(--color2);
+	border-radius: 2.7px;
+	width: 100%;
+	text-align: center;
+}
+.text-body li button:hover{
+	cursor: pointer;
+}
+.text-body li button:active{
+	background: rgb(190, 110, 0);
+}
+.footer div ul li a{
+	transition: all 0.35s ease;
+}
+.footer div ul li a:hover{
+	color: currentColor;
+	transition: all 0.35s ease;
+}
+.footer div ul li label{
+	font-size: 14px;
+	font-weight: 600;
+	
+}
+.footer div ul li input, .footer div ul li textarea{
+	border-radius: 3px;
+	border-style: none;
+	padding: 10px;
+	width: 100%;
+}
+.footer div ul li input{
+	height: 35px;
+
+}
+.footer div ul li textarea{
+	height: 100px;
+}
+.copyright{
+	text-align: center;
+	padding: 50px;
+	color: var(--color2);
+	font-weight: 600;
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+.profile-links{
+	margin: 13px;
+}
+.profile-links a{
+	margin: 5px;
+}

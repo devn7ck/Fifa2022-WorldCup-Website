@@ -1,0 +1,39 @@
+.header{
+	height: auto;
+	min-height: 40rem;
+	width: 100%;
+	padding: 12rem 40px 40px;
+	background-image: url(../img/portfolio_web_bg.png);
+	background-color: var(--color1);
+	background-size: contain;
+	background-position:center;
+}
+
+.head-text{
+	margin: auto;
+	padding: 20px;
+	text-align: center;
+	font-size: 65px;
+	color: white;
+	font-weight: 900;
+	line-height: "";
+	text-shadow: 0 7px 19px rgb(0,0,0, 0.2);
+}
+
+.head-text p{
+	font-size: 36px;
+	font-weight: initial;
+	line-height: "";
+}
+
+.head-text h2, .head-text p{
+	color: white;
+}
+
+.head-text .ease{
+	color: var(--color2);
+}
+
+.section-1{
+	text-align: center;
+}
