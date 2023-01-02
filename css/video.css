@@ -1,0 +1,20 @@
+.text.l{
+    margin-right: 30px;
+}
+.text.r{
+    margin-left: 30px;
+}
+
+.section-2{
+    margin: 110px auto;
+}
+
+.section-2 video{
+    max-height: 650px;
+    width: 650px;
+    max-width: 90vw;
+}
+
+.text h2,.text p{
+    margin-top: 13px;
+}

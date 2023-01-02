@@ -8,6 +8,8 @@
 	--color1: rgb(240, 195, 214);
 	--color2: rgb(128, 61, 89);
 	--color3: rgb(238, 227, 232);
+	--color4: rgb(22, 10, 16);
+	--color5: rgb(170, 34, 91);
 }
 
 html{
@@ -15,7 +17,7 @@ html{
 }
 
 .ease{
-	transition: all ease 0.98s;
+	transition: all ease 0.78s;
 }
 .flex{
 	display: inline-flex;
@@ -36,7 +38,7 @@ li{
 	list-style: none;
 }
 
-h2, h3, svg, p, span{
+h2, h3, p, span, label, input{
 	color: rgb(87,87,87);
 }
 h2, h3, h4, p, span, .logo, .copyright{
@@ -76,6 +78,7 @@ nav{
 	/*background: rgb(5,5,5);
 	box-shadow: 0 6px 5px 1px rgb(0,0,0,0.45);*/
     background: transparent;
+	z-index: 10;
 }
 
 .navbar{
@@ -93,7 +96,7 @@ nav{
 	font: "";
 	transition: all 0.3s ease-in;
 }
-.logo:hover{
+.logo:hover, .menu-list.A li a:hover{
 	color: white;
 }
 .menu{ 	
@@ -104,6 +107,9 @@ nav{
 .menu-list{
 	display: inline-flex;
 	flex-wrap: wrap;
+}
+.menu-list.A svg{
+	margin-right: 6px;
 }
 .menu-list li{
 	display: inherit;
@@ -149,13 +155,13 @@ nav{
 	}
     .dropdown-menu{
         position: absolute;
-		left: 0;
-        width: /*246px*/ 100vw;
-		height: 100vh;
+		right: 0;
+        width: 246px /*100vw*/;
+		height: 24rem;
         justify-content: center;
         align-content: center;
-        background: rgb(0,0,0,0.83);
-        transform: translateY(37px)/*translate(-129.3px, 43.4px)*/;
+        background: var(--color4);
+        transform: translate(-1px, 20.4px);
         border-radius:0 0 3px 3px;
         box-shadow: 0 6px 5px 1px rgb(0,0,0,0.45);
 		z-index: 5;
@@ -186,14 +192,50 @@ nav{
 		height: 23px;
 		margin-right: 12px;
     }
-    .dropdown-menu ul li a:hover{
-        background: rgb(1, 2, 1, 0.84);
+	.dropdown-menu ul li a:hover{
+        background: var(--color2);
         color: #ffffff;
         border-radius: 3px;
     }
     .dropdown-menu ul li a:active{
         background: #201802;
     }
+
+}
+
+.header{
+	height: auto;
+	min-height: 40rem;
+	width: 100%;
+	padding: 12rem 40px 40px;
+	background:linear-gradient(var(--color1), var(--color2));
+	background-size: cover;
+	background-position:center;
+}
+
+.head-text{
+	margin: auto;
+	padding: 20px;
+	text-align: center;
+	font-size: 65px;
+	color: white;
+	font-weight: 900;
+	line-height: "";
+	text-shadow: 0 7px 19px rgba(0, 0, 0, 0.452);
+}
+
+.head-text p{
+	font-size: 36px;
+	font-weight: initial;
+	line-height: "";
+}
+
+.head-text h2, .head-text p{
+	color: white;
+}
+
+.head-text .ease{
+	color: var(--color5);
 }
 
 section{
@@ -204,7 +246,9 @@ section{
 section h3{
 	margin: 32px;
 }
-
+.section-1{
+	text-align: center;
+}
 #sec-1{
 	background-color:var(--color3);
 }
@@ -225,13 +269,6 @@ section h3{
 	color: var(--color2);
 }
 
-.section-2{
-	max-width: 99vw;
-	height: auto;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
 .box{
 	border-radius: 7px;
     min-width: 195px;
@@ -240,7 +277,7 @@ section h3{
 	background-color: var(--color3);
 }
 .box:active{
-	box-shadow: 0 0 14px 7px rgb(0,0,0, 0.29);
+	box-shadow: 0 0 14px 7px var(--color2);
 }
 .group{
 	padding: 18px;
@@ -262,10 +299,18 @@ section h3{
 	margin: 5px auto;
 }
 
+@media screen and (max-width:71.07rem){
+	section{
+		padding: 60px;
+	}
+	.section-2{
+		flex-wrap: wrap;
+	}
+}
 /*#######################################FOOTER STYLESHEET#########################################*/
 
 footer{
-	background: rgb(8,8,6);
+	background: var(--color4);
 }
 .footer{
 	width: 100%;
@@ -301,16 +346,20 @@ footer{
 	text-align: center;
 	line-height: 22px;
 }
-.page-links ul li{
-	margin: 13px 8px;
+.useful-links ul{
+	text-align: left;
 }
-.email-me ul li{
+.useful-links ul li{
+	margin: 13px 8px;
+	padding-left: 35px;
+}
+.email-us ul li{
 	margin: 13px 0;
 }
-.about .text-body, .page-links ul li, .email-me ul li{
+.about .text-body, .useful-links ul li a, .email-us ul li{
 	font-size: 15.8px;
 }
-.email-me ul li textarea{
+.email-us ul li textarea{
 	font-size: 12.65px;
 }
 .text-body li button{
@@ -327,7 +376,7 @@ footer{
 	cursor: pointer;
 }
 .text-body li button:active{
-	background: rgb(190, 110, 0);
+	background: var(--color1);
 }
 .footer div ul li a{
 	transition: all 0.35s ease;
@@ -344,7 +393,7 @@ footer{
 .footer div ul li input, .footer div ul li textarea{
 	border-radius: 3px;
 	border-style: none;
-	padding: 10px;
+	padding: 7px;
 	width: 100%;
 }
 .footer div ul li input{
@@ -362,9 +411,9 @@ footer{
 	font-size: 11px;
 	letter-spacing: 1px;
 }
-.profile-links{
+.social-links{
 	margin: 13px;
 }
-.profile-links a{
+.social-links a{
 	margin: 5px;
 }
